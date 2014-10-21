@@ -23,10 +23,11 @@ private static final long serialVersionUID = 1L;
 		String kolor = request.getParameter("select");
 		String liczbaMiejsc = request.getParameter("liczbaMiejsc");
 		String rodzaj = request.getParameter("rodzaj");
+		String zdjecie = request.getParameter("zdjecie");
 		
 		int liczMiejsc = Integer.parseInt(liczbaMiejsc);
 		
-		Tramwaj tramwaj1 = new Tramwaj(firma, model, kolor, rodzaj, liczMiejsc);
+		Tramwaj tramwaj1 = new Tramwaj(firma, model, kolor, rodzaj, liczMiejsc, zdjecie);
 		TablicaObiektow.Tablica(tramwaj1);
 		
 		response.setContentType("text/html");
@@ -45,6 +46,7 @@ private static final long serialVersionUID = 1L;
 						+"<br />Kolor: " + tramwaj1.getKolor()+ "<br />"
 						+"<br />Rodzaj: " + tramwaj1.getRodzaj()+ "<br />"
 						+"<br />Liczba miejsc: " + tramwaj1.getLiczbaMiejsc()+ "<br /><br />"
+						+"Zdjecie <img src="+ tramwaj1.getZdjecie()+" alt='Cos poszlo nie tak ;(' />"
 						+"<p><a href=\"WszystkieTramwaje1\">Lista tramwajów</a></p>"
 					 +"</body>"
 				  + "</html>");

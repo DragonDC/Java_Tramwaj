@@ -23,9 +23,12 @@ public class StronaTytulowa extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">"
 				+"<html>"
+				+"<head>"
+					+"<script type='text/html' src='Sprawdzenie.js'>"
+				+"<head/>"
 					+ "<body>"
 						+ "<h2>Program Tramwaj</h2>"
-						+"<form action='OdnosnikTramwaj1' method='get'>" +
+						+"<form action='OdnosnikTramwaj1' name='formularz' method='get'>" +
 						
 						"Podaj Firme: <input type='textbox' name='firma' value=''><br />" +
 						"Podaj Model: <input type='textbox' name='model' value=''><br />" +
@@ -48,8 +51,14 @@ public class StronaTytulowa extends HttpServlet {
 						"<br />"+
 						"Rodzaj: <br />Towarowy <input type='radio' name='rodzaj' value='towarowy' checked />"+
 						"<br />Pasazerski <input type='radio' name='rodzaj' value='pasazerski' /><br /><br />"+
-						"<input type='submit' value=' OK ' />" +
+						
+						"Podaj adres zdjecia: <input type='textbox' name='zdjecie' value=''><br /><br />" +
+						
+						"<input type='submit' onclick='sprawdz_formularz' value=' OK ' />" +
 						"</form>" 
+						
+						
+						
 					+ "</body>"
 				  + "</html>");
 		out.close();

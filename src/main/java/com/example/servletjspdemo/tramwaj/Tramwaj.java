@@ -24,10 +24,12 @@ class TablicaObiektow{
                     String Kolor = TabOb.get(i).getKolor();
                     String Rodzaj = TabOb.get(i).getRodzaj();
                     int liczMiejsc = TabOb.get(i).getLiczbaMiejsc();
+                    String zdjecie = TabOb.get(i).getZdjecie();
                     String licMiejsc = Integer.toString(liczMiejsc);
                     
                     
-                    tekst = tekst+" "+Indeks+" "+Firma+" "+Model+" "+Kolor+" "+Rodzaj+" "+licMiejsc+"<br />";
+                    tekst = tekst+" "+Indeks+" "+Firma+" "+Model+" "+Kolor+" "+Rodzaj+" "
+                    +licMiejsc+" <img src='"+zdjecie+"' alt='Brak zdjecia' /><br /><br />";
             } 
 			return tekst;
 		}
@@ -41,14 +43,16 @@ public class Tramwaj {
 	private String model;
 	private String rodzaj;
 	private int liczbaMiejsc;
+	private String zdjecie;
 	
 	
-	public Tramwaj(String firma, String model, String kolor, String rodzaj, int liczbaMiejsc){
+	public Tramwaj(String firma, String model, String kolor, String rodzaj, int liczbaMiejsc, String zdjecie){
 		setFirma(firma);
 		setModel(model);		
 		setKolor(kolor);
 		setRodzaj(rodzaj);
 		setLiczbaMiejsc(liczbaMiejsc);
+		setZdjecie(zdjecie);
 	}
 	
 	
@@ -100,7 +104,16 @@ public class Tramwaj {
 		this.rodzaj = rodzaj;
 	}
 
-		
+	
+	
+	public String getZdjecie(){
+		return zdjecie;
+	}
+	
+	private void setZdjecie(String zdjecie){
+		this.zdjecie = zdjecie;
+	}
+	
 	/*public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
