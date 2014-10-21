@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+#button{
+	margin: 10px;
+}
+
+#panel_gorny{
+	background-color: #dedef8;
+	border: 2px solid orange;
+	width: 970px;
+	height:70;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+}
+
+#tresc_strony{
+	background-color: #dedef8;
+	border: 2px solid orange;
+	width: 970px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	border-radius: 10px;
+}
