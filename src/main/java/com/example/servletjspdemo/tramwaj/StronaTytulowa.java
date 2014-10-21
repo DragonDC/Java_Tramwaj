@@ -25,10 +25,19 @@ public class StronaTytulowa extends HttpServlet {
 				+"<html>"
 				+"<head>"
 					+"<script src='Sprawdzenie.js' type='text/javascript'></script>"
+					+"<link href='StylTram.css' rel='stylesheet' type='text/css'>"
 				+"<head/>"
 					+ "<body>"
 						+ "<h2>Program Tramwaj</h2>"
-						+"<form action='OdnosnikTramwaj1' name='formularz' method='get'>" +
+						+ "<div class='container' id='panel_gorny'>"
+						+ "<a href='Tramwaj1' role='button' id='button'>"
+						+ "Strona główna"
+						+ "</a>"
+						+ "</div>"
+						
+						
+						+ "<div class='container' id='tresc_strony'>"
+						+ "<form action='OdnosnikTramwaj1' name='formularz' method='get'>" +
 						
 						"Podaj Firme: <input type='textbox' name='firma' value='' required><br />" +
 						"Podaj Model: <input type='textbox' name='model' value='' required><br />" +
@@ -56,7 +65,7 @@ public class StronaTytulowa extends HttpServlet {
 						
 						"<input type='submit' onClick='return(sprawdz_formularz());' value=' OK ' />" +
 						"</form>" 
-						
+						+ "</div>"
 						
 						
 					+ "</body>"
