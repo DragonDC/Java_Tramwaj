@@ -37,17 +37,36 @@ private static final long serialVersionUID = 1L;
 				+"<html>"
 				+"<head>"
 					+"<meta HTTP-EQUIV=\"content-type\" CONTENT=\"text/html; charset=UTF-8\"/>"
+					+"<link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\" rel=\"stylesheet\">"
+					+"<link href='StylTram.css' rel='stylesheet' type='text/css'>"
 				+"</head>"
 					+ "<body>"
-						+ "<h2>Witaj w odnosniku</h2>"
-						+"<img src='http://media.giphy.com/media/d5vr9eXCrZnEI/giphy.gif' alt='Gif' />"
-						+"<br />Firma: " + tramwaj1.getFirma()+"<br />"
-						+"<br />Model: " + tramwaj1.getModel()+ "<br />"
-						+"<br />Kolor: " + tramwaj1.getKolor()+ "<br />"
-						+"<br />Rodzaj: " + tramwaj1.getRodzaj()+ "<br />"
-						+"<br />Liczba miejsc: " + tramwaj1.getLiczbaMiejsc()+ "<br /><br />"
-						+"Zdjecie <img src="+ tramwaj1.getZdjecie()+" alt='Cos poszlo nie tak ;(' />"
-						+"<p><a href=\"WszystkieTramwaje1\">Lista tramwajów</a></p>"
+						+ "<h2><center>Witaj w odnosniku<center></h2>"
+						
+						+ "<div class='container' id='panel_gorny'>"
+										
+							+ "<a href='Tramwaj1' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
+								+ "Strona główna"
+							+ "</a>"
+					
+							
+							+ "<a href='WszystkieTramwaje1' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
+								+ "Lista tramwajów"
+							+ "</a>"
+								
+							
+						
+						+ "</div>"
+						
+						+ "<div class='container' id='tresc_strony'>"
+							+ "<br />Firma: " + tramwaj1.getFirma()+"<br />"
+							+ "<br />Model: " + tramwaj1.getModel()+ "<br />"
+							+ "<br />Kolor: " + tramwaj1.getKolor()+ "<br />"
+							+ "<br />Rodzaj: " + tramwaj1.getRodzaj()+ "<br />"
+							+ "<br />Liczba miejsc: " + tramwaj1.getLiczbaMiejsc()+ "<br /><br />"
+							+ "Zdjecie <img src="+ tramwaj1.getZdjecie()+" alt='Cos poszlo nie tak ;(' />"
+						+ "</div>"
+							
 					 +"</body>"
 				  + "</html>");
 		out.close();

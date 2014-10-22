@@ -21,12 +21,31 @@ public class WszystkieTramwaje extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">"
-				+"<html>"
+				+"<html>"				
+					+"<head>"
+						+"<meta HTTP-EQUIV=\"content-type\" CONTENT=\"text/html; charset=UTF-8\"/>"
+						+"<link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\" rel=\"stylesheet\">"
+						+"<link href='StylTram.css' rel='stylesheet' type='text/css'>"
+					+"</head>"
+					
 					+ "<body>"
-						+ "<h2>Lista Tramwajów</h2>"						
-						+"<br /><br /><br />"
-						+TablicaObiektow.getTablica()
+						+ "<h2><center>Lista Tramwajów<center></h2>"
+					
+						+ "<div class='container' id='panel_gorny'>"
+							+ "<a href='Tramwaj1' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
+								+ "Strona główna"
+							+ "</a>"
+
+							+ "<a href='WszystkieTramwaje1' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
+								+ "Lista tramwajów"
+							+ "</a>"
+
+						+ "</div>"
 						
+						+ "<div class='container' id='tresc_strony'>"
+							+TablicaObiektow.getTablica()
+						+ "</div>"
+							
 					+ "</body>"
 				  + "</html>");
 		out.close();
