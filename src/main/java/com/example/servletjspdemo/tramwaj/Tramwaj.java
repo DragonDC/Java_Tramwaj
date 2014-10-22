@@ -24,12 +24,13 @@ class TablicaObiektow{
                     String Kolor = TabOb.get(i).getKolor();
                     String Rodzaj = TabOb.get(i).getRodzaj();
                     int liczMiejsc = TabOb.get(i).getLiczbaMiejsc();
+                    String Kolory = TabOb.get(i).getKolory();
                     String zdjecie = TabOb.get(i).getZdjecie();
                     String licMiejsc = Integer.toString(liczMiejsc);
                     
                     
                     tekst = tekst+" "+Indeks+" "+Firma+" "+Model+" "+Kolor+" "+Rodzaj+" "
-                    +licMiejsc+" <img src='"+zdjecie+"' alt='Brak zdjecia' /><br /><br />";
+                    +licMiejsc+" "+Kolory+" <img src='"+zdjecie+"' alt='Brak zdjecia' /><br /><br />";
             } 
 			return tekst;
 		}
@@ -44,14 +45,16 @@ public class Tramwaj {
 	private String rodzaj;
 	private int liczbaMiejsc;
 	private String zdjecie;
+	private String kolory;
 	
 	
-	public Tramwaj(String firma, String model, String kolor, String rodzaj, int liczbaMiejsc, String zdjecie){
+	public Tramwaj(String firma, String model, String kolor, String rodzaj, int liczbaMiejsc, String kolory, String zdjecie){
 		setFirma(firma);
 		setModel(model);		
 		setKolor(kolor);
 		setRodzaj(rodzaj);
 		setLiczbaMiejsc(liczbaMiejsc);
+		setKolory(kolory);
 		setZdjecie(zdjecie);
 	}
 	
@@ -112,6 +115,15 @@ public class Tramwaj {
 	
 	private void setZdjecie(String zdjecie){
 		this.zdjecie = zdjecie;
+	}
+	
+	
+	public String getKolory(){
+		return kolory;
+	}
+	
+	private void setKolory(String kolory){
+		this.kolory = kolory;
 	}
 	
 	/*public static void main(String[] args) {

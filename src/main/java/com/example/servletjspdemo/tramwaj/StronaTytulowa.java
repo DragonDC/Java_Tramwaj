@@ -25,7 +25,7 @@ public class StronaTytulowa extends HttpServlet {
 				"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'   'http://www.w3.org/TR/html4/loose.dtd'>"
 				+"<html>"
 				+"<head>"
-					+"<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />"
+					+"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\" />"
 					+"<script src='Sprawdzenie.js' type='text/javascript'></script>"
 					+"<link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\" rel=\"stylesheet\">"
 					+"<link href='StylTram.css' rel='stylesheet' type='text/css'>"
@@ -68,6 +68,14 @@ public class StronaTytulowa extends HttpServlet {
 						"<br />"+
 						"Rodzaj: <br />Towarowy <input type='radio' name='rodzaj' value='towarowy' checked />"+
 						"<br />Pasażerski <input type='radio' name='rodzaj' value='pasazerski' /><br /><br />"+
+						
+						"Wybierz kolory: <br />"+
+						"<input type='checkbox' name='kolory' value='Czerwony ' /> Czerwony <br />"+
+						"<input type='checkbox' name='kolory' value='Niebieski ' /> Niebieski <br />"+
+						"<input type='checkbox' name='kolory' value='Rozowy ' /> Różowy <br />"+
+						"<input type='checkbox' name='kolory' value='Zielony ' /> Zielony <br />"+
+						"<input type='checkbox' name='kolory' value='Zolty ' /> Żółty <br />"+
+						"<input type='checkbox' name='kolory' value='Jakis tam ' /> Jakiś tam <br /><br />"+
 						
 						"Podaj adres zdjęcia: <input type='textbox' id='button' name='zdjecie' value='' required><br /><br />" +
 						

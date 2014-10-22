@@ -25,9 +25,19 @@ private static final long serialVersionUID = 1L;
 		String rodzaj = request.getParameter("rodzaj");
 		String zdjecie = request.getParameter("zdjecie");
 		
+		String wszystkieKolory = "";
+		
+		String[] kolory = request.getParameterValues("kolory");
+		
+		for(String kol: kolory){
+			wszystkieKolory = wszystkieKolory + kol;
+		}
+		
+		//System.out.println(wszystkieKolory);
+		
 		int liczMiejsc = Integer.parseInt(liczbaMiejsc);
 		
-		Tramwaj tramwaj1 = new Tramwaj(firma, model, kolor, rodzaj, liczMiejsc, zdjecie);
+		Tramwaj tramwaj1 = new Tramwaj(firma, model, kolor, rodzaj, liczMiejsc, wszystkieKolory, zdjecie);
 		TablicaObiektow.Tablica(tramwaj1);
 		
 		response.setContentType("text/html");
@@ -63,7 +73,8 @@ private static final long serialVersionUID = 1L;
 							+ "<br />Model: " + tramwaj1.getModel()+ "<br />"
 							+ "<br />Kolor: " + tramwaj1.getKolor()+ "<br />"
 							+ "<br />Rodzaj: " + tramwaj1.getRodzaj()+ "<br />"
-							+ "<br />Liczba miejsc: " + tramwaj1.getLiczbaMiejsc()+ "<br /><br />"
+							+ "<br />Liczba miejsc: " + tramwaj1.getLiczbaMiejsc()+ "<br />"
+							+ "<br />Kolory: " + tramwaj1.getKolory()+ "<br /><br />"
 							+ "Zdjecie <img src="+ tramwaj1.getZdjecie()+" alt='Cos poszlo nie tak ;(' />"
 						+ "</div>"
 							
