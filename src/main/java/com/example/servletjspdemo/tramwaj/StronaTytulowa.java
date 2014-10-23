@@ -18,14 +18,14 @@ public class StronaTytulowa extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		response.setContentType("text/html");
+		response.setContentType("text/html; charset=UTF-8");
 		
 		PrintWriter out = response.getWriter();
 		out.println(
 				"<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'   'http://www.w3.org/TR/html4/loose.dtd'>"
 				+"<html>"
 				+"<head>"
-					+"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-2\" />"
+					+"<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />"
 					+"<script src='Sprawdzenie.js' type='text/javascript'></script>"
 					+"<link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\" rel=\"stylesheet\">"
 					+"<link href='StylTram.css' rel='stylesheet' type='text/css'>"
@@ -49,15 +49,12 @@ public class StronaTytulowa extends HttpServlet {
 						
 						"Podaj Firme: <input type='textbox' id='button' name='firma' value='' required><br />" +
 						"Podaj Model: <input type='textbox' id='button' name='model' value='' required><br />" +
-						"Podaj Kolor: <br />" +
+						"Klasyfikacja ze względu na wysokość podłogi: <br />" +
 						"<select name='select' multiple='multiple' defaultvalue>"+
 
-					    	"<option value='czerwony'>Czerwony</option>"+
-					    	"<option value='niebieski'>Niebieski</option>"+
-					    	"<option selected value='pomaranczowy'>Pomarańczowy</option>"+
-					    	"<option value='zielony'>Zielony</option>"+
-					    	"<option value='brazowy'>Brązowy</option>"+
-					    	"<option value='bialy'>Biały</option>"+
+					    	"<option selected value='Wysokopodłogowy'>Wysokopodłogowy</option>"+
+					    	"<option value='Średniopodłogowy'>Średniopodłogowy</option>"+
+					    	"<option value='Niskopodłogowy'>Niskopodłogowy</option>"+
 					    
 						"</select>"+
 						"<br /><br />"+
@@ -72,10 +69,10 @@ public class StronaTytulowa extends HttpServlet {
 						"Wybierz kolory: <br />"+
 						"<input type='checkbox' name='kolory' value='Czerwony ' /> Czerwony <br />"+
 						"<input type='checkbox' name='kolory' value='Niebieski ' /> Niebieski <br />"+
-						"<input type='checkbox' name='kolory' value='Rozowy ' /> Różowy <br />"+
+						"<input type='checkbox' name='kolory' value='Różowy ' /> Różowy <br />"+
 						"<input type='checkbox' name='kolory' value='Zielony ' /> Zielony <br />"+
-						"<input type='checkbox' name='kolory' value='Zolty ' /> Żółty <br />"+
-						"<input type='checkbox' name='kolory' value='Jakis tam ' /> Jakiś tam <br /><br />"+
+						"<input type='checkbox' name='kolory' value='Żółty ' /> Żółty <br />"+
+						"<input type='checkbox' name='kolory' value='Jakiś tam ' /> Jakiś tam <br /><br />"+
 						
 						"Podaj adres zdjęcia: <input type='textbox' id='button' name='zdjecie' value='' required><br /><br />" +
 						

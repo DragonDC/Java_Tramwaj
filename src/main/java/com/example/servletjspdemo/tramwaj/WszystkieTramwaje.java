@@ -17,7 +17,7 @@ public class WszystkieTramwaje extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		response.setContentType("text/html");
+		response.setContentType("text/html; charset=UTF-8");
 		
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">"
@@ -42,9 +42,9 @@ public class WszystkieTramwaje extends HttpServlet {
 
 						+ "</div>"
 						
-						+ "<div class='container' id='tresc_strony'>"
+						
 							+TablicaObiektow.getTablica()
-						+ "</div>"
+						
 							
 					+ "</body>"
 				  + "</html>");

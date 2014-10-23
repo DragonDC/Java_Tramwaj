@@ -20,7 +20,7 @@ private static final long serialVersionUID = 1L;
 		
 		String firma = request.getParameter("firma");
 		String model = request.getParameter("model");
-		String kolor = request.getParameter("select");
+		String wysPodlogi = request.getParameter("select");
 		String liczbaMiejsc = request.getParameter("liczbaMiejsc");
 		String rodzaj = request.getParameter("rodzaj");
 		String zdjecie = request.getParameter("zdjecie");
@@ -28,19 +28,25 @@ private static final long serialVersionUID = 1L;
 		String wszystkieKolory = "";
 		
 		String[] kolory = request.getParameterValues("kolory");
-		
-		for(String kol: kolory){
-			wszystkieKolory = wszystkieKolory + kol;
+		if(kolory == null)
+		{
+			wszystkieKolory = "brak kolorów";
+		}
+		else
+		{
+			for(String kol: kolory){
+				wszystkieKolory = wszystkieKolory + kol;
+			}
 		}
 		
 		//System.out.println(wszystkieKolory);
 		
 		int liczMiejsc = Integer.parseInt(liczbaMiejsc);
 		
-		Tramwaj tramwaj1 = new Tramwaj(firma, model, kolor, rodzaj, liczMiejsc, wszystkieKolory, zdjecie);
+		Tramwaj tramwaj1 = new Tramwaj(firma, model, wysPodlogi, rodzaj, liczMiejsc, wszystkieKolory, zdjecie);
 		TablicaObiektow.Tablica(tramwaj1);
 		
-		response.setContentType("text/html");
+		response.setContentType("text/html; charset=UTF-8");
 		
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">"
@@ -69,13 +75,15 @@ private static final long serialVersionUID = 1L;
 						+ "</div>"
 						
 						+ "<div class='container' id='tresc_strony'>"
+							
+							+ "<img class='obrazek' src="+ tramwaj1.getZdjecie()+" alt='Cos poszlo nie tak ;(' align='right'  />"
 							+ "<br />Firma: " + tramwaj1.getFirma()+"<br />"
 							+ "<br />Model: " + tramwaj1.getModel()+ "<br />"
-							+ "<br />Kolor: " + tramwaj1.getKolor()+ "<br />"
+							+ "<br />Kolor: " + tramwaj1.getWysPodlogi()+ "<br />"
 							+ "<br />Rodzaj: " + tramwaj1.getRodzaj()+ "<br />"
 							+ "<br />Liczba miejsc: " + tramwaj1.getLiczbaMiejsc()+ "<br />"
 							+ "<br />Kolory: " + tramwaj1.getKolory()+ "<br /><br />"
-							+ "Zdjecie <img src="+ tramwaj1.getZdjecie()+" alt='Cos poszlo nie tak ;(' />"
+							
 						+ "</div>"
 							
 					 +"</body>"

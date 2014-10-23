@@ -21,7 +21,7 @@ class TablicaObiektow{
 					int Indeks = i+1;
                     String Firma = TabOb.get(i).getFirma();
                     String Model = TabOb.get(i).getModel();
-                    String Kolor = TabOb.get(i).getKolor();
+                    String WysPodlogi = TabOb.get(i).getWysPodlogi();
                     String Rodzaj = TabOb.get(i).getRodzaj();
                     int liczMiejsc = TabOb.get(i).getLiczbaMiejsc();
                     String Kolory = TabOb.get(i).getKolory();
@@ -29,8 +29,10 @@ class TablicaObiektow{
                     String licMiejsc = Integer.toString(liczMiejsc);
                     
                     
-                    tekst = tekst+" "+Indeks+" "+Firma+" "+Model+" "+Kolor+" "+Rodzaj+" "
-                    +licMiejsc+" "+Kolory+" <img src='"+zdjecie+"' alt='Brak zdjecia' /><br /><br />";
+                    tekst = tekst+"<div class='container' id='tresc_strony'>"+
+                    "<img src='"+zdjecie+"' alt='Brak zdjecia' class='obrazek' align='right' />"+
+                    "<br />"+Indeks+"<br />"+Firma+"<br />"+Model+"<br />"+WysPodlogi+"<br />"+Rodzaj+"<br />"
+                    +licMiejsc+"<br />"+Kolory+"</div><br /><br />";
             } 
 			return tekst;
 		}
@@ -39,7 +41,7 @@ class TablicaObiektow{
 
 
 public class Tramwaj {
-	private String kolor;
+	private String wysPodlogi;
 	private String firma;
 	private String model;
 	private String rodzaj;
@@ -48,10 +50,10 @@ public class Tramwaj {
 	private String kolory;
 	
 	
-	public Tramwaj(String firma, String model, String kolor, String rodzaj, int liczbaMiejsc, String kolory, String zdjecie){
+	public Tramwaj(String firma, String model, String wysPodlogi, String rodzaj, int liczbaMiejsc, String kolory, String zdjecie){
 		setFirma(firma);
 		setModel(model);		
-		setKolor(kolor);
+		setWysPodlogi(wysPodlogi);
 		setRodzaj(rodzaj);
 		setLiczbaMiejsc(liczbaMiejsc);
 		setKolory(kolory);
@@ -59,12 +61,12 @@ public class Tramwaj {
 	}
 	
 	
-	public String getKolor(){
-		return kolor;
+	public String getWysPodlogi(){
+		return wysPodlogi;
 	}
 	
-	private void setKolor(String kolor){
-		this.kolor = kolor;
+	private void setWysPodlogi(String wysPodlogi){
+		this.wysPodlogi = wysPodlogi;
 	}
 	
 	
