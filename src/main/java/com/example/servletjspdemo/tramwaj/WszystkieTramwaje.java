@@ -19,6 +19,22 @@ public class WszystkieTramwaje extends HttpServlet {
 		
 		response.setContentType("text/html; charset=UTF-8");
 		
+		
+		String button_usun = request.getParameter("button_usun");
+		
+		
+		if(button_usun != null){
+			int indeks = Integer.parseInt(button_usun);
+			try {
+				TablicaObiektow.usunObjekt(indeks);
+			} catch (Exception e) {
+				response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			}
+			
+			//System.out.println(indeks);
+		}
+		
+		
 		PrintWriter out = response.getWriter();
 		out.println("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">"
 				+"<html>"				

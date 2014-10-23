@@ -12,6 +12,10 @@ class TablicaObiektow{
 			TabOb.add(tramwaj);		
 		}
 		
+		static void usunObjekt(int indeks){
+			TabOb.remove(indeks);
+		}
+		
 		//tablica obiektow tramwaj
 		//funkcja pewnie bedzie zawierac calego htmla do utworzenia strony z obiektami
 		static String getTablica()
@@ -35,8 +39,8 @@ class TablicaObiektow{
                     "<br />Numer: "+Indeks+"<br />Firma: "+Firma+"<br />Model: "+Model+
                     "<br />Wysokość podłogi: "+WysPodlogi+"<br />Rozstwaw osi: "+Rozstaw+"<br />Liczba miejsc: "
                     +licMiejsc+"<br />"+Kolory+"<br /><br />"
-                    +"<form action='WszystkieTramwaje1'>"
-                    +"<input type='submit' id='button' class='btn btn-default' onClick='return(usun("+i+","+TabOb+"));' value=' USUŃ ' />"
+                    +"<form action='WszystkieTramwaje1' method='get'>"
+                    +"<button type='submit' name='button_usun' id='button' class='btn btn-default' value='"+i+"'> USUŃ </button>"
                     +"</form>"
                     +"</div>";
             } 
