@@ -46,7 +46,8 @@ public class StronaTytulowa extends HttpServlet {
 						
 						+ "<div class='container' id='tresc_strony'>"
 						+ "<form action='OdnosnikTramwaj1' name='formularz' method='get'>" +
-						
+						 "<img class='obrazek_glowna' src='http://img3.wikia.nocookie.net/__cb20130408113047/tramwaj/pl/images/b/b3/Duewag_GT8_Grudzi%C4%85dz.jpg' alt='Cos poszlo nie tak ;(' align='right'  />"+
+						"<br />"+
 						"Podaj Firme: <input type='textbox' id='button' name='firma' value='' required><br />" +
 						"Podaj Model: <input type='textbox' id='button' name='model' value='' required><br />" +
 						"Klasyfikacja ze względu na wysokość podłogi: <br />" +
@@ -63,8 +64,10 @@ public class StronaTytulowa extends HttpServlet {
 						
 						
 						"<br />"+
-						"Rodzaj: <br />Towarowy <input type='radio' name='rodzaj' value='towarowy' checked />"+
-						"<br />Pasażerski <input type='radio' name='rodzaj' value='pasazerski' /><br /><br />"+
+						"Rozstaw osi: <br />"
+						+ "1000 mm <input type='radio' name='rozstaw' value='1000 mm' checked /><br />"
+						+ "1435 mm <input type='radio' name='rozstaw' value='1435 mm' /><br />"
+						+ "1524 mm <input type='radio' name='rozstaw' value='1524 mm' /><br /><br />"+
 						
 						"Wybierz kolory: <br />"+
 						"<input type='checkbox' name='kolory' value='Czerwony ' /> Czerwony <br />"+
@@ -76,7 +79,7 @@ public class StronaTytulowa extends HttpServlet {
 						
 						"Podaj adres zdjęcia: <input type='textbox' id='button' name='zdjecie' value='' required><br /><br />" +
 						
-						"<input type='submit' id='button' class='btn btn-default' onClick='return(sprawdz_formularz());' value=' Zapisz ' />" +
+						"<input type='submit' id='button' class='btn btn-default' onClick='return(sprawdz_formularz());' value=' ZAPISZ ' />" +
 						"</form>" 
 						+ "</div>"
 						

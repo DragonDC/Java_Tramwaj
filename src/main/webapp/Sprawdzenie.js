@@ -17,3 +17,10 @@
 				return true;
      			
 		}
+		
+		function usun(i, TabOb)
+		{
+			TabOb.remove(i);
+			
+			return true;
+		}

@@ -22,7 +22,7 @@ private static final long serialVersionUID = 1L;
 		String model = request.getParameter("model");
 		String wysPodlogi = request.getParameter("select");
 		String liczbaMiejsc = request.getParameter("liczbaMiejsc");
-		String rodzaj = request.getParameter("rodzaj");
+		String rozstawOsi = request.getParameter("rozstaw");
 		String zdjecie = request.getParameter("zdjecie");
 		
 		String wszystkieKolory = "";
@@ -43,7 +43,7 @@ private static final long serialVersionUID = 1L;
 		
 		int liczMiejsc = Integer.parseInt(liczbaMiejsc);
 		
-		Tramwaj tramwaj1 = new Tramwaj(firma, model, wysPodlogi, rodzaj, liczMiejsc, wszystkieKolory, zdjecie);
+		Tramwaj tramwaj1 = new Tramwaj(firma, model, wysPodlogi, rozstawOsi, liczMiejsc, wszystkieKolory, zdjecie);
 		TablicaObiektow.Tablica(tramwaj1);
 		
 		response.setContentType("text/html; charset=UTF-8");
@@ -80,7 +80,7 @@ private static final long serialVersionUID = 1L;
 							+ "<br />Firma: " + tramwaj1.getFirma()+"<br />"
 							+ "<br />Model: " + tramwaj1.getModel()+ "<br />"
 							+ "<br />Kolor: " + tramwaj1.getWysPodlogi()+ "<br />"
-							+ "<br />Rodzaj: " + tramwaj1.getRodzaj()+ "<br />"
+							+ "<br />Rozstaw osi: " + tramwaj1.getRozstawOsi()+ "<br />"
 							+ "<br />Liczba miejsc: " + tramwaj1.getLiczbaMiejsc()+ "<br />"
 							+ "<br />Kolory: " + tramwaj1.getKolory()+ "<br /><br />"
 							
