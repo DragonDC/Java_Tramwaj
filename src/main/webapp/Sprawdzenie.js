@@ -1,7 +1,13 @@
 /**
  * +"<script type='text/javascript' src='Sprawdzenie.js'></script>"
  */
-	
+		function usun(indeks)
+		{
+			TablicaObiektow.usunObjekt(indeks);
+			return true;
+		}
+
+
 		function sprawdz_formularz()
 		{
 			var firma = document.forms["formularz"]["liczbaMiejsc"].value;

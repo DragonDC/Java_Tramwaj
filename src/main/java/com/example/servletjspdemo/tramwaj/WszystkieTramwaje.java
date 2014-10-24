@@ -40,6 +40,7 @@ public class WszystkieTramwaje extends HttpServlet {
 				+"<html>"				
 					+"<head>"
 						+"<meta HTTP-EQUIV=\"content-type\" CONTENT=\"text/html; charset=UTF-8\"/>"
+						+"<script src='Sprawdzenie.js' type='text/javascript'></script>"
 						+"<link href=\"http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css\" rel=\"stylesheet\">"
 						+"<link href='StylTram.css' rel='stylesheet' type='text/css'>"
 					+"</head>"

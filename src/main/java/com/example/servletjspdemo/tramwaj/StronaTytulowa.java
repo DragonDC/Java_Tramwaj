@@ -75,6 +75,8 @@ public class StronaTytulowa extends HttpServlet {
 						"<input type='checkbox' name='kolory' value='Różowy ' /> Różowy <br />"+
 						"<input type='checkbox' name='kolory' value='Zielony ' /> Zielony <br />"+
 						"<input type='checkbox' name='kolory' value='Żółty ' /> Żółty <br />"+
+						"<input type='checkbox' name='kolory' value='Biały ' /> Biały <br />"+
+						"<input type='checkbox' name='kolory' value='Czarny ' /> Czarny <br />"+
 						"<input type='checkbox' name='kolory' value='Jakiś tam ' /> Jakiś tam <br /><br />"+
 						
 						"Podaj adres zdjęcia: <input type='textbox' id='button' name='zdjecie' value='' required><br /><br />" +

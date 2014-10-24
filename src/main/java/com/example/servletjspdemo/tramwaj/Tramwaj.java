@@ -38,7 +38,7 @@ class TablicaObiektow{
                     "<img src='"+zdjecie+"' alt='Brak zdjecia' class='obrazek' align='right' />"+
                     "<br />Numer: "+Indeks+"<br />Firma: "+Firma+"<br />Model: "+Model+
                     "<br />Wysokość podłogi: "+WysPodlogi+"<br />Rozstwaw osi: "+Rozstaw+"<br />Liczba miejsc: "
-                    +licMiejsc+"<br />"+Kolory+"<br /><br />"
+                    +licMiejsc+"<br />Kolory: "+Kolory+"<br /><br />"
                     +"<form action='WszystkieTramwaje1' method='get'>"
                     +"<button type='submit' name='button_usun' id='button' class='btn btn-default' value='"+i+"'> USUŃ </button>"
                     +"</form>"
