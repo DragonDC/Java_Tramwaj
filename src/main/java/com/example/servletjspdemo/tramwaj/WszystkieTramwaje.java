@@ -1,4 +1,4 @@
-package com.example.servletjspdemo.tramwaj;
+/*package com.example.servletjspdemo.tramwaj;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -49,7 +49,7 @@ public class WszystkieTramwaje extends HttpServlet {
 						+ "<h2><center>Lista Tramwajów<center></h2>"
 					
 						+ "<div class='container' id='panel_gorny'>"
-							+ "<a href='Tramwaj1' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
+							+ "<a href='Tramwaj_jsp' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
 								+ "Strona główna"
 							+ "</a>"
 
@@ -60,7 +60,7 @@ public class WszystkieTramwaje extends HttpServlet {
 						+ "</div>"
 						
 						
-							+TablicaObiektow.getTablica()
+							//+TablicaObiektow.getTablica()
 						
 							
 					+ "</body>"
@@ -69,3 +69,4 @@ public class WszystkieTramwaje extends HttpServlet {
 	}
 
 }
+*/

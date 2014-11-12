@@ -14,5 +14,6 @@
         <p><a href="getPersonData.jsp">Fill a Person form</a></p>
         <p><a href="Program">Pierwszy program</a></p>
         <p><a href="Tramwaj1">Pierwszy tramwaj</a></p>
+        <p><a href="tram/StronaGlownaTram.jsp">Drugi Tramwaj</a></p>
     </body>
 </html>

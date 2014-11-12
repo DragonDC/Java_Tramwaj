@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-class TablicaObiektow{
+/*class TablicaObiektow{
 	static List<Tramwaj> TabOb = new ArrayList<Tramwaj>();
 	
 	//obiekt wrzucic do funkcji a w funkcji dodac go do listy
@@ -14,6 +14,10 @@ class TablicaObiektow{
 		
 		static void usunObjekt(int indeks){
 			TabOb.remove(indeks);
+		}
+		
+		static List<Tramwaj> zwrocTablice(){
+			return TabOb;
 		}
 		
 		//tablica obiektow tramwaj
@@ -48,7 +52,7 @@ class TablicaObiektow{
 		}
 	
 }
-
+*/
 
 public class Tramwaj {
 	private String wysPodlogi;

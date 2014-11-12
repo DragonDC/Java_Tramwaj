@@ -1,4 +1,4 @@
-package com.example.servletjspdemo.tramwaj;
+/*package com.example.servletjspdemo.tramwaj;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -61,7 +61,7 @@ private static final long serialVersionUID = 1L;
 						
 						+ "<div class='container' id='panel_gorny'>"
 										
-							+ "<a href='Tramwaj1' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
+							+ "<a href='Tramwaj_jsp' class=\"btn btn-primary btn-lg\" role='button' id='button'>"
 								+ "Strona główna"
 							+ "</a>"
 					
@@ -91,3 +91,4 @@ private static final long serialVersionUID = 1L;
 		out.close();
 	}
 }
+*/
