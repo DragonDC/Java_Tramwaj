@@ -1,4 +1,4 @@
-package com.example.servletjspdemo.tramwaj;
+/*package com.example.servletjspdemo.tramwaj;
 
 
 import java.io.IOException;
@@ -92,3 +92,4 @@ public class StronaTytulowa extends HttpServlet {
 	}
 
 }
+*/
