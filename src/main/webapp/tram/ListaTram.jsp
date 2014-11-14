@@ -15,6 +15,18 @@
 <body>
 	<jsp:useBean id="storage" class="com.example.servletjspdemo.service.TramwajStorage" scope="application"/>
 	
+	<%
+		String button_usun = request.getParameter("button_usun");
+		if(button_usun != null){
+			int indeks = Integer.parseInt(button_usun);
+			try {
+				storage.usunObjekt(indeks);
+			} catch (Exception e) {
+				response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+			}
+	
+		}
+	%>
 	
 	<h2 align="center">Witaj w odnosniku</h2>
 						
@@ -30,7 +42,6 @@
 			</a>
 		</div>	
 		<% 
-			//ewidentnie zle dziala dodawanie, kazdy nastepny element nadpisuje poprzednie
 			/* int i;
 			int ilosc = storage.tabOb.size();
 			for(i=0;i<ilosc;i++){
@@ -42,18 +53,23 @@
 				+ "<br/>Model: <b>" + tramwaj.getModel() + "</b>");	
 			} */
 		%>
+		
 		<c:forEach var="wiersz"  varStatus="loopCounter" items="${storage.tabOb}">
 			<div class="container" id="tresc_strony">
 							
 				<img class="obrazek" src="<c:url value="${wiersz.zdjecie}"/>" alt="Cos poszlo nie tak ;(" align="right"/>
-				<br /><c:out value="Numer: ${loopCounter.count}"/><br />
-				<br />Firma: <c:out value="${wiersz.firma}"/><br />
-				<br />Model: <c:out value="${wiersz.model}"/><br />
-				<br />Wysokość podłogi: <c:out value="${wiersz.wysPodlogi}"/><br />
-				<br />Rozstaw osi: <c:out value="${wiersz.rozstawOsi}"/><br />
-				<br />Liczba miejsc: <c:out value="${wiersz.liczbaMiejsc}"/><br />
+				<br /><c:out value="Numer: ${loopCounter.count}"/>
+				<br />Firma: <c:out value="${wiersz.firma}"/>
+				<br />Model: <c:out value="${wiersz.model}"/>
+				<br />Wysokość podłogi: <c:out value="${wiersz.wysPodlogi}"/>
+				<br />Rozstaw osi: <c:out value="${wiersz.rozstawOsi}"/>
+				<br />Liczba miejsc: <c:out value="${wiersz.liczbaMiejsc}"/>
 				<br />Kolory: <c:out value="${wiersz.kolory}"/><br /><br />
-							
+				
+				<form action="ListaTram.jsp" method="get">
+                	<button type="submit" name="button_usun" id="button" class="btn btn-default" value="${loopCounter.count - 1}"> USUŃ </button>
+                </form>	
+           		
 			</div>
 		</c:forEach>
 </body>

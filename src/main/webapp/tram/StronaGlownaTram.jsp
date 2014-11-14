@@ -7,7 +7,7 @@
 	<script src='Sprawdzenie.js' type='text/javascript'></script>
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 	<link href="StylTram.css" rel="stylesheet" type="text/css">
-<title>Strona Glowna</title>
+	<title>Strona Glowna</title>
 </head>
 <body>
 		<jsp:useBean id="storage" class="com.example.servletjspdemo.service.TramwajStorage" scope="application" />
@@ -39,7 +39,7 @@
 	<div class="container" id="tresc_strony">
 	
 		<form action="DodanyTramwaj.jsp" name="formularz" method="get">
-			<img class="obrazek_glowna" src="http://img3.wikia.nocookie.net/__cb20130408113047/tramwaj/pl/images/b/b3/Duewag_GT8_Grudzi%C4%85dz.jpg" alt="Cos poszlo nie tak ;(" align="right"  />
+			<img class="obrazek_glowna" src="http://img2.wikia.nocookie.net/__cb20130328082321/tramwaj/pl/images/d/db/Konstal_805Na_zmodernizowany_Grudzi%C4%85dz.jpg" alt="Cos poszlo nie tak ;(" align="right"  />
 			<br />
 			Podaj Firme: <input type="text" id="button" name="firma" value="" required>
 			<br />

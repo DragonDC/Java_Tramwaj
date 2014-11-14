@@ -6,7 +6,12 @@
 			TablicaObiektow.usunObjekt(indeks);
 			return true;
 		}
-
+		
+		function sprawdz_Imie_Nazwisko()
+		{
+			
+		}
+		
 
 		function sprawdz_formularz()
 		{
