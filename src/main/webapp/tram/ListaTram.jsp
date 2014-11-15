@@ -1,3 +1,4 @@
+<%@page import="com.example.servletjspdemo.domain.Rejestracja"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="com.example.servletjspdemo.domain.Tramwaj"%>
@@ -14,6 +15,28 @@
 </head>
 <body>
 	<jsp:useBean id="storage" class="com.example.servletjspdemo.service.TramwajStorage" scope="application"/>
+	<jsp:useBean id="rejestracjaStorage" class="com.example.servletjspdemo.service.RejestracjaStorage" scope="application" />
+	<%
+			if(session.getAttribute("Log") == null)
+			{ 
+				%>
+				<br /><br /><br />
+				<div class="container" id="tresc_strony">
+					<br /><br /><center>Chyba cos poszlo nie tak ;(</center><br />
+					<center>Nie powinno Cię tu być, dlatego zaraz to zmienię ;)</center><br /><br />
+					<center><img class="obrazek_glowna" src="http://s.v3.tvp.pl/images/c/6/d/uid_c6de6eb4dde6896233a47a1e4105d5221410510081064_width_700_play_0_pos_3_gs_0.jpg" alt="Cos poszlo nie tak ;("  /></center>
+				
+					<script type="text/javascript">
+						setTimeout(function(){location.href="StronaStartowa.jsp";}, 3500);
+					</script>
+				
+				</div>
+				<%
+			
+				return;
+			}
+		%>
+	
 	
 	<%
 		String button_usun = request.getParameter("button_usun");
@@ -40,6 +63,31 @@
 			<a href="ListaTram.jsp" class="btn btn-primary btn-lg" id="button">
 				Lista tramwajów
 			</a>
+			
+			<a href="Wylogowanie.jsp" class="btn btn-primary btn-lg" id="button">
+				Wyloguj
+			</a>	
+			
+			<% 
+		if(session.getAttribute("Log") != null)
+		{
+			
+			for(Rejestracja rejestracja : rejestracjaStorage.getTabRej())
+			{
+				if(session.getAttribute("Log").equals(rejestracja.getLogin()))
+				{
+					%>
+					<div align="right">
+						Zalogowany jako: <a href="Profil.jsp"> <%out.print(rejestracja.getLogin());%> </a>
+					</div>
+					<%
+				}
+			}
+						
+		
+		}
+		%>
+			
 		</div>	
 		<% 
 			/* int i;

@@ -7,12 +7,24 @@
 			return true;
 		}
 		
-		function sprawdz_Imie_Nazwisko()
-		{
-			
+		function sprawdz_hasla()
+		{	
+			var haslo1 = document.forms["formularzRej"]["haslo1"].value;
+			var haslo2 = document.forms["formularzRej"]["haslo2"].value;
+			/*document.write(haslo1);
+			document.write(haslo2);*/
+			if(haslo1!=haslo2) {
+				/*document.getElementById('haslo1').value="";
+				document.getElementById('haslo2').value="";*/
+				alert('Podane hasła się różnią.');
+				document.forms["formularzRej"]["haslo1"].value="";
+				document.forms["formularzRej"]["haslo2"].value="";
+				return false;
+			}
+			else
+				return true;
 		}
-		
-
+	
 		function sprawdz_formularz()
 		{
 			var firma = document.forms["formularz"]["liczbaMiejsc"].value;

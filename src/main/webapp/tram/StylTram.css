@@ -4,6 +4,24 @@
 	margin: 10px;
 }
 
+#button_wylogowanie{
+	margin-left:450px;
+}
+
+#data{
+	margin: 10px;
+	align:left;
+}
+
+#czas{
+	margin: 10px;
+	align:left;
+}
+
+#login{
+	margin-left: 670px;
+}
+
 #panel_gorny{
 	background-color: #dedef8;
 	border: 2px solid orange;
@@ -40,6 +58,26 @@
 	height: 400px;
 	padding: 2px;
    	border: 2px solid #021a40;	
+}
+
+#textI{
+	margin: 10px;
+}
+
+#textN{
+	margin: 10px;
+}
+
+#textL{
+	margin: 10px;
+}
+
+#textH{
+	margin: 10px;
+}
+
+#textH2{
+	margin: 10px;
 }
 
 
