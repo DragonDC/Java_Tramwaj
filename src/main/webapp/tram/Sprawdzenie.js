@@ -11,9 +11,16 @@
 		{	
 			var haslo1 = document.forms["formularzRej"]["haslo1"].value;
 			var haslo2 = document.forms["formularzRej"]["haslo2"].value;
+			var dlugoscHasla = haslo1.length;;
 			/*document.write(haslo1);
 			document.write(haslo2);*/
-			if(haslo1!=haslo2) {
+			if(dlugoscHasla<5){
+				alert("Hasło powinno mieć przynajmniej 5 znaków");
+				document.forms["formularzRej"]["haslo1"].value="";
+				document.forms["formularzRej"]["haslo2"].value="";
+				return false;
+			}
+			else if(haslo1!=haslo2) {
 				/*document.getElementById('haslo1').value="";
 				document.getElementById('haslo2').value="";*/
 				alert('Podane hasła się różnią.');

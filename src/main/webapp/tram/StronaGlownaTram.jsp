@@ -55,18 +55,35 @@
 			Wyloguj
 		</a>
 		
-		<!-- <div class="container"> -->
+		<div>
+			
+			<div style="display: inline;" id="czas"></div>
+				<script type="text/javascript">
+				function getTime()
+				{
+    				return (new Date()).toLocaleTimeString();
+				}
+ 
+				document.getElementById('czas').innerHTML = getTime();
+ 
+				setInterval(function() {
+ 					document.getElementById('czas').innerHTML = getTime();
+     			}, 1000);
+			</script>
 		
-		<div id="data" class="data_login">
-			<c:set var="aktualnaData" value="<%=new java.util.Date()%>" />
-				<fmt:formatDate 
-					type="date"
-					value="${aktualnaData}"
-				/>
-				
+		
+			<div style="display: inline;" id="data">
+				<c:set var="aktualnaData" value="<%=new java.util.Date()%>" />
+					<fmt:formatDate 
+						type="date"
+						value="${aktualnaData}"
+					/>		
+			</div>
 		
 		
-			<% 
+		</div>
+		
+		<% 
 			if(session.getAttribute("Log") != null)
 			{
 			
@@ -75,30 +92,16 @@
 					if(session.getAttribute("Log").equals(rejestracja.getLogin()))
 					{
 					%>
-						<div style="display: inline;" id="login" align="right">
-						Zalogowany jako: <a href="Profil.jsp"> <%out.print(rejestracja.getLogin());%> </a>
+						<div id="login" align="right">
+							Zalogowany jako: <a href="Profil.jsp"> <%out.print(rejestracja.getLogin());%> </a>
 						</div>
 					<%
 					}
 				}					
 		
 			}
-			%>
-		</div>
+			%>	
 		
-		<div id="czas"></div>
-		<script type="text/javascript">
-			function getTime()
-			{
-    			return (new Date()).toLocaleTimeString();
-			}
- 
-			document.getElementById('czas').innerHTML = getTime();
- 
-			setInterval(function() {
- 				document.getElementById('czas').innerHTML = getTime();
-     		}, 1000);
-		</script>
 		
 		</div>
 					
@@ -107,7 +110,7 @@
 	<div class="container" id="tresc_strony">
 	
 		<form action="DodanyTramwaj.jsp" name="formularz" method="get">
-			<img class="obrazek_glowna" src="http://img2.wikia.nocookie.net/__cb20130328082321/tramwaj/pl/images/d/db/Konstal_805Na_zmodernizowany_Grudzi%C4%85dz.jpg" alt="Cos poszlo nie tak ;(" align="right"  />
+			<img class="obrazek_glowna" src="http://upload.wikimedia.org/wikipedia/commons/c/c8/Bydgoszcz_tramwaj.jpg" alt="Cos poszlo nie tak ;(" align="right"  />
 			<br />
 			Podaj Firme: <input type="text" id="button" name="firma" value="" required>
 			<br />

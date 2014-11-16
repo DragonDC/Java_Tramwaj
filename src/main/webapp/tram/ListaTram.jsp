@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix='c'%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt" %>
 <%@page import="com.example.servletjspdemo.domain.Rejestracja"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -64,29 +66,60 @@
 				Lista tramwajów
 			</a>
 			
-			<a href="Wylogowanie.jsp" class="btn btn-primary btn-lg" id="button">
+			
+			<a href="Wylogowanie.jsp" class="btn btn-primary btn-lg" id="button_wylogowanie">
 				Wyloguj
-			</a>	
-			
-			<% 
-		if(session.getAttribute("Log") != null)
-		{
-			
-			for(Rejestracja rejestracja : rejestracjaStorage.getTabRej())
-			{
-				if(session.getAttribute("Log").equals(rejestracja.getLogin()))
-				{
-					%>
-					<div align="right">
-						Zalogowany jako: <a href="Profil.jsp"> <%out.print(rejestracja.getLogin());%> </a>
-					</div>
-					<%
-				}
-			}
-						
+			</a>
 		
-		}
-		%>
+		
+			<div>
+			
+			<div style="display: inline;" id="czas"></div>
+				<script type="text/javascript">
+				function getTime()
+				{
+    				return (new Date()).toLocaleTimeString();
+				}
+ 
+				document.getElementById('czas').innerHTML = getTime();
+ 
+				setInterval(function() {
+ 					document.getElementById('czas').innerHTML = getTime();
+     			}, 1000);
+			</script>
+		
+		
+			<div style="display: inline;" id="data">
+				<c:set var="aktualnaData" value="<%=new java.util.Date()%>" />
+					<fmt:formatDate 
+						type="date"
+						value="${aktualnaData}"
+					/>		
+			</div>
+		
+		
+		</div>
+		
+		<% 
+			if(session.getAttribute("Log") != null)
+			{
+			
+				for(Rejestracja rejestracja : rejestracjaStorage.getTabRej())
+				{
+					if(session.getAttribute("Log").equals(rejestracja.getLogin()))
+					{
+					%>
+						<div id="login" align="right">
+							Zalogowany jako: <a href="Profil.jsp"> <%out.print(rejestracja.getLogin());%> </a>
+						</div>
+					<%
+					}
+				}					
+		
+			}
+			%>	
+			
+			
 			
 		</div>	
 		<% 
